@@ -7,12 +7,15 @@ public class Main {
         Gryffindor garryPotter = new Gryffindor("Гарри Поттер", 10, 9, 100, 95, 100);
         Gryffindor germionaGrandger = new Gryffindor("Гермиона Грейнджер", 8, 10, 80, 89, 79);
         Gryffindor ronYizly = new Gryffindor("Рон Уизли", 6, 5, 75, 50, 59);
+        //
         Hufflepuff zachariahSmith = new Hufflepuff("Захария Смит", 6, 5, 75, 50, 59);
         Hufflepuff cedricDiggory = new Hufflepuff(" Седрик Диггори", 6, 5, 75, 50, 59);
         Hufflepuff justinFinchFletchley = new Hufflepuff("Джастин Финч-Флетчли", 6, 5, 75, 50, 59);
+        //
         Ravenclaw zhouChang = new Ravenclaw("Чжоу Чанг", 6, 5, 75, 50, 59,45);
         Ravenclaw padmaPatil = new Ravenclaw("Падма Патил", 6, 5, 75, 50, 75,50);
         Ravenclaw marcusBelby = new Ravenclaw("Маркус Белби", 6, 5, 75, 50, 94,51);
+        //
         Slytherin dracoMalfoy = new Slytherin("Драко Малфой", 6, 5, 75, 50, 59,45, 12);
         Slytherin grahamMontague = new Slytherin("Грэхэм Монтегю", 6, 5, 75, 50, 75,50,41);
         Slytherin gregoryGoyle = new Slytherin("Грегори Гойл", 6, 5, 75, 50, 94,51, 15);
