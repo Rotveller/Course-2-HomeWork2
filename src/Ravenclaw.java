@@ -1,36 +1,42 @@
-import java.util.Arrays;
+public class Ravenclaw extends hogwarts{
+    //Когтевран
+private int smart;
+    //умны
+    private int wise;
+    //мудры
+    private int witty;
+    //остроумны
+    private int creativity;
+    //полны творчества
 
-public class Main {
-
-    public static void main(String[] args) {
-
-        Gryffindor garryPotter = new Gryffindor("Гарри Поттер", 10, 9, 100, 95, 100);
-        Gryffindor germionaGrandger = new Gryffindor("Гермиона Грейнджер", 8, 10, 80, 89, 79);
-        Gryffindor ronYizly = new Gryffindor("Рон Уизли", 6, 5, 75, 50, 59);
-        //
-        Hufflepuff zachariahSmith = new Hufflepuff("Захария Смит", 6, 5, 75, 50, 59);
-        Hufflepuff cedricDiggory = new Hufflepuff(" Седрик Диггори", 6, 5, 75, 50, 59);
-        Hufflepuff justinFinchFletchley = new Hufflepuff("Джастин Финч-Флетчли", 6, 5, 75, 50, 59);
-        //
-        Ravenclaw zhouChang = new Ravenclaw("Чжоу Чанг", 6, 5, 75, 50, 59,45);
-        Ravenclaw padmaPatil = new Ravenclaw("Падма Патил", 6, 5, 75, 50, 75,50);
-        Ravenclaw marcusBelby = new Ravenclaw("Маркус Белби", 6, 5, 75, 50, 94,51);
-        //
-        Slytherin dracoMalfoy = new Slytherin("Драко Малфой", 6, 5, 75, 50, 59,45, 12);
-        Slytherin grahamMontague = new Slytherin("Грэхэм Монтегю", 6, 5, 75, 50, 75,50,41);
-        Slytherin gregoryGoyle = new Slytherin("Грегори Гойл", 6, 5, 75, 50, 94,51, 15);
-printAllInformationOfStudents(garryPotter);
-        public String printAllInformationOfStudents() {
-            return "hogwarts{" +
-                    "fullNameStudent='" + hogwarts.getFullNameStudent() + '\'' +
-                    ", powerOfMagic=" + hogwarts.getPowerOfMagic() +
-                    ", distanceOfTheTransgression=" + hogwarts.getDistanceOfTheTransgression() +
-                    '}';
-
-        /*
+    public Ravenclaw(String fullNameStudent, int powerOfMagic, int distanceOfTheTransgression, int smart, int wise, int witty, int creativity) {
+        super(fullNameStudent, powerOfMagic, distanceOfTheTransgression);
+        this.smart = smart;
+        this.wise = wise;
+        this.witty = witty;
+        this.creativity = creativity;
+    }
+}
+/*В школе магии и волшебства Хогвартс есть четыре факультета:
+        - Гриффиндор
+                - Пуффендуй
+                - Когтевран
+                - Слизерин
+                Gryffindor, Ravenclaw, Hufflepuff, Slytherin.
 Студентам каждого из этих факультетов присущи свои свойства характера. Эти свойства оцениваются в целочисленном эквиваленте от 0 до 100.
+Всем Гриффиндорцам присущи благородство, честь и храбрость.
+Студенты Пуффендуя трудолюбивы, верны, честны.
+Когтевранцы умны, мудры, остроумны и полны творчества.
+Всем ученикам Слизерина присущи хитрость, решительность, амбициозность, находчивость и жажда власти.
 Абсолютно все ученики школы Хогвартс умеют колдовать с мощностью в сколько-то баллов и могут трансгрессировать на какое-то расстояние.
 Сила магии и расстояние трансгресии у каждого ученика своё и выражается в целочисленном эквиваленте.
+Гарри Поттер, Гермиона Грейнджер и Рон Уизли учатся на факультете Гриффиндор.
+Драко Малфой, Грэхэм Монтегю, Грегори Гойл учатся на Слизерине.
+На факультет Пуффендуй учатся Захария Смит, Седрик Диггори, Джастин Финч-Флетчли.
+ На факультете Когтевран учится Чжоу Чанг, Падма Патил и Маркус Белби.
+ Напишите программу, в которой реализован класс hogwarts и четыре класса по названиям факультетов.
+ В классах факультетов опишите свойства каждого, перечисленные выше. Ученики должны быть реализованы в качестве объектов.
+ Должна быть возможность задавать качества учеников через конструктор. Присвойте каждому свойству произвольное числовое значение от 0 до 100.
  Сделайте метод, который выводит на экран описание студента.
  В описание надо включать качества, которые присущи всем студентам, плюс качества, которые присущи студенту, потому что он учится на конкретном факультете.
  Реализуйте 4 метода, по одному для каждого факультета, которые сравнивают между собой учеников одного факультета по свойствам.
@@ -43,5 +49,3 @@ printAllInformationOfStudents(garryPotter);
  Реализуйте метод, который сравнивает двух любых учеников Хогвартса по силе магии и расстоянию трансгрессии, и выводит в консоль сравнительную оценку между двумя учениками.
 Например, Драко Малфой обладает бОльшей мощностью магии, чем Захария Смит.
  Важно: поля объектов должны быть приватными.*/
-    }
-}
