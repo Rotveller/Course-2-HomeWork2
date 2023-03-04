@@ -20,6 +20,12 @@ public class Main {
         Slytherin grahamMontague = new Slytherin("Грэхэм Монтегю", 6, 5, 75, 50, 75,50,41);
         Slytherin gregoryGoyle = new Slytherin("Грегори Гойл", 6, 5, 75, 50, 94,51, 15);
 printAllInformationOfStudents(garryPotter);
+        public String printAllInformationOfStudents() {
+            return "hogwarts{" +
+                    "fullNameStudent='" + hogwarts.getFullNameStudent() + '\'' +
+                    ", powerOfMagic=" + hogwarts.getPowerOfMagic() +
+                    ", distanceOfTheTransgression=" + hogwarts.getDistanceOfTheTransgression() +
+                    '}';
 
         /*
 Студентам каждого из этих факультетов присущи свои свойства характера. Эти свойства оцениваются в целочисленном эквиваленте от 0 до 100.
@@ -38,9 +44,4 @@ printAllInformationOfStudents(garryPotter);
 Например, Драко Малфой обладает бОльшей мощностью магии, чем Захария Смит.
  Важно: поля объектов должны быть приватными.*/
     }
-
-    public static void printAllInformationOfStudents(Gryffindor gryffindor) {
-        System.out.println();
-    }
-
 }
