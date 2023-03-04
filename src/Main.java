@@ -19,13 +19,13 @@ public class Main {
         Slytherin dracoMalfoy = new Slytherin("Драко Малфой", 6, 5, 75, 50, 59,45, 12);
         Slytherin grahamMontague = new Slytherin("Грэхэм Монтегю", 6, 5, 75, 50, 75,50,41);
         Slytherin gregoryGoyle = new Slytherin("Грегори Гойл", 6, 5, 75, 50, 94,51, 15);
-printAllInformationOfStudents(garryPotter);
-        public String printAllInformationOfStudents() {
+
+        /*public String printAllInformationOfStudents() {
             return "hogwarts{" +
                     "fullNameStudent='" + hogwarts.getFullNameStudent() + '\'' +
                     ", powerOfMagic=" + hogwarts.getPowerOfMagic() +
                     ", distanceOfTheTransgression=" + hogwarts.getDistanceOfTheTransgression() +
-                    '}';
+                    '}';*/
 
         /*
 Студентам каждого из этих факультетов присущи свои свойства характера. Эти свойства оцениваются в целочисленном эквиваленте от 0 до 100.

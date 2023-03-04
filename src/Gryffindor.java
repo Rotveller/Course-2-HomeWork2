@@ -3,7 +3,7 @@ public class Gryffindor extends hogwarts {
 
     protected int nobility;
     //благородство
-    protected int honor ;
+    protected int honor;
     //честь
     protected int bravery;
     //храбрость
@@ -15,13 +15,13 @@ public class Gryffindor extends hogwarts {
         this.bravery = bravery;
     }
 
-    @Override
-    public String toString() {
-        return "Имя="+ getFullNameStudent()+getDistanceOfTheTransgression()+getPowerOfMagic()+ "Gryffindor{" +
-                "благородство=" + nobility +
-                ", честь=" + honor +
-                ", храбрость=" + bravery +
+    public String printAllInformationOfStudents() {
+        return "hogwarts{" +
+                "fullNameStudent='" + fullNameStudent + '\'' +
+                ", powerOfMagic=" + powerOfMagic +
+                ", distanceOfTheTransgression=" + distanceOfTheTransgression +
                 '}';
+
     }
 }
 /*
