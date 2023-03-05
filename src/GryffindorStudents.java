@@ -1,27 +1,33 @@
-public class Gryffindor extends hogwarts {
+public class GryffindorStudents extends Hogwarts {
     //Грифиндор
 
     protected int nobility;
     //благородство
-    protected int honor ;
+    protected int honor;
     //честь
     protected int bravery;
     //храбрость
 
-    public Gryffindor(String fullNameStudent, int powerOfMagic, int distanceOfTheTransgression, int nobility, int honor, int bravery) {
+    public GryffindorStudents(String fullNameStudent, int powerOfMagic, int distanceOfTheTransgression, int nobility, int honor, int bravery) {
         super(fullNameStudent, powerOfMagic, distanceOfTheTransgression);
         this.nobility = nobility;
         this.honor = honor;
         this.bravery = bravery;
     }
+    private int ability() {
+        return nobility+honor+bravery;
+    }
 
-    @Override
-    public String toString() {
-        return "Имя="+ getFullNameStudent()+getDistanceOfTheTransgression()+getPowerOfMagic()+ "Gryffindor{" +
-                "благородство=" + nobility +
-                ", честь=" + honor +
-                ", храбрость=" + bravery +
-                '}';
+    public void compareTotalAbility(GryffindorStudents gryffindorStudents) {
+        int student1 = ability();
+        int student2 = gryffindorStudents.ability();
+        if (student1 > student2) {
+            System.out.println("Студент Грифиндора"+getFullNameStudent()+" лучше чем студент Грифиндора "+gryffindorStudents.getFullNameStudent()+" "+student2+" <"+student1);
+        }else if (student1 < student2) {
+            System.out.println("Студент Грифиндора"+gryffindorStudents.getFullNameStudent()+" лучше чем студент Грифиндора"+getFullNameStudent()+" "+student1+" <"+student2);
+        }else{
+            System.out.println("Студент Грифиндора"+getFullNameStudent()+" имеет равное количество Грифиндора "+gryffindorStudents.getFullNameStudent()+" "+student2+"="+student1);
+        }
     }
 }
 /*
@@ -36,7 +42,7 @@ public class Gryffindor extends hogwarts {
 Драко Малфой, Грэхэм Монтегю, Грегори Гойл учатся на Слизерине.
 На факультет Пуффендуй учатся Захария Смит, Седрик Диггори, Джастин Финч-Флетчли.
  На факультете Когтевран учится Чжоу Чанг, Падма Патил и Маркус Белби.
- Напишите программу, в которой реализован класс hogwarts и четыре класса по названиям факультетов.
+ Напишите программу, в которой реализован класс gryffindorStudents и четыре класса по названиям факультетов.
  В классах факультетов опишите свойства каждого, перечисленные выше. Ученики должны быть реализованы в качестве объектов.
  Должна быть возможность задавать качества учеников через конструктор. Присвойте каждому свойству произвольное числовое значение от 0 до 100.
  Сделайте метод, который выводит на экран описание студента.
