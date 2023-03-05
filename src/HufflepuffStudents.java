@@ -1,4 +1,4 @@
-public class HufflepuffStudents extends Hogwarts{
+public class HufflepuffStudents extends Hogwarts {
     //Пуффендуй
     private int hardworking;
     //трудолюбивы
@@ -14,20 +14,29 @@ public class HufflepuffStudents extends Hogwarts{
         this.loyal = loyal;
         this.honest = honest;
     }
+
     private int ability() {
-        return hardworking+loyal+honest;
+        return hardworking + loyal + honest;
     }
 
-    public void compareTotalAbility(HufflepuffStudents hufflepuffStudents) {
+    public void compareHufflepuffStudents(HufflepuffStudents hufflepuffStudents) {
         int student1 = ability();
         int student2 = hufflepuffStudents.ability();
         if (student1 > student2) {
-            System.out.println("Студент Пуффендуй"+getFullNameStudent()+" лучше чем студент Пуффендуй"+hufflepuffStudents.getFullNameStudent()+" "+student2+" <"+student1);
-        }else if (student1 < student2) {
-            System.out.println("Студент Пуффендуй"+hufflepuffStudents.getFullNameStudent()+" лучше чем студент Пуффендуй"+getFullNameStudent()+" "+student1+" <"+student2);
-        }else{
-            System.out.println("Студент Пуффендуй"+getFullNameStudent()+" имеет равное количество Пуффендуй"+hufflepuffStudents.getFullNameStudent()+" "+student2+"="+student1);
+            System.out.println("Студент Пуффендуй " + getFullNameStudent() + " лучше чем студент Пуффендуй" + hufflepuffStudents.getFullNameStudent() + " " + student1 + " > " + student2);
+        } else if (student1 < student2) {
+            System.out.println("Студент Пуффендуй " + hufflepuffStudents.getFullNameStudent() + " лучше чем студент Пуффендуй" + getFullNameStudent() + " " + student1 + " > " + student2);
+        } else {
+            System.out.println("Студент Пуффендуй " + getFullNameStudent() + " имеет равное количество Пуффендуй" + hufflepuffStudents.getFullNameStudent() + " " + student2 + " = " + student1);
         }
+    }
+
+    @Override
+    public String toString() {
+        return " Пуффендуй " + super.toString() +
+                "трудолюбивость = " + hardworking +
+                ", верность = " + loyal +
+                ", честность = " + honest;
     }
 }
 /*В школе магии и волшебства Хогвартс есть четыре факультета:
