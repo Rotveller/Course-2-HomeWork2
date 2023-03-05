@@ -1,28 +1,46 @@
-public class Ravenclaw extends hogwarts{
-    //Когтевран
-private int smart;
-    //умны
-    private int wise;
-    //мудры
-    private int witty;
-    //остроумны
-    private int creativity;
-    //полны творчества
+public class SlytherinStudents extends Hogwarts{
+    private int cunning;
+    //хитрость
+    private int determination;
+    //решительность
+    private int ambition;
+    //амбициозность
+    private int resourcefulness ;
+    //находчивость
+    private int imperiousness ;
+    //властность
 
-    public Ravenclaw(String fullNameStudent, int powerOfMagic, int distanceOfTheTransgression, int smart, int wise, int witty, int creativity) {
+    public SlytherinStudents(String fullNameStudent, int powerOfMagic, int distanceOfTheTransgression, int cunning, int determination, int ambition, int resourcefulness, int imperiousness) {
         super(fullNameStudent, powerOfMagic, distanceOfTheTransgression);
-        this.smart = smart;
-        this.wise = wise;
-        this.witty = witty;
-        this.creativity = creativity;
+        this.cunning = cunning;
+        this.determination = determination;
+        this.ambition = ambition;
+        this.resourcefulness = resourcefulness;
+        this.imperiousness = imperiousness;
     }
-}
-/*В школе магии и волшебства Хогвартс есть четыре факультета:
+    private int ability() {
+        return cunning+determination+ambition+resourcefulness+imperiousness;
+    }
+
+    public void compareTotalAbility(SlytherinStudents slytherinStudents) {
+        int student1 = ability();
+        int student2 = slytherinStudents.ability();
+        if (student1 > student2) {
+            System.out.println("Студент Слизерин"+getFullNameStudent()+" лучше чем студент Слизерин"+slytherinStudents.getFullNameStudent()+" "+student2+" <"+student1);
+        }else if (student1 < student2) {
+            System.out.println("Студент Слизерин"+slytherinStudents.getFullNameStudent()+" лучше чем студент Слизерин"+getFullNameStudent()+" "+student1+" <"+student2);
+        }else{
+            System.out.println("Студент Слизерин"+getFullNameStudent()+" имеет равное количество Слизерин"+slytherinStudents.getFullNameStudent()+" "+student2+"="+student1);
+        }
+    }
+
+    //Слизерин
+    /*В школе магии и волшебства Хогвартс есть четыре факультета:
         - Гриффиндор
-                - Пуффендуй
+                - Слизерин
                 - Когтевран
                 - Слизерин
-                Gryffindor, Ravenclaw, Hufflepuff, Slytherin.
+                Gryffindor, Ravenclaw, Hufflepuff, SlytherinStudents.
 Студентам каждого из этих факультетов присущи свои свойства характера. Эти свойства оцениваются в целочисленном эквиваленте от 0 до 100.
 Всем Гриффиндорцам присущи благородство, честь и храбрость.
 Студенты Пуффендуя трудолюбивы, верны, честны.
@@ -32,7 +50,7 @@ private int smart;
 Сила магии и расстояние трансгресии у каждого ученика своё и выражается в целочисленном эквиваленте.
 Гарри Поттер, Гермиона Грейнджер и Рон Уизли учатся на факультете Гриффиндор.
 Драко Малфой, Грэхэм Монтегю, Грегори Гойл учатся на Слизерине.
-На факультет Пуффендуй учатся Захария Смит, Седрик Диггори, Джастин Финч-Флетчли.
+На факультет Слизерин учатся Захария Смит, Седрик Диггори, Джастин Финч-Флетчли.
  На факультете Когтевран учится Чжоу Чанг, Падма Патил и Маркус Белби.
  Напишите программу, в которой реализован класс hogwarts и четыре класса по названиям факультетов.
  В классах факультетов опишите свойства каждого, перечисленные выше. Ученики должны быть реализованы в качестве объектов.
@@ -49,3 +67,4 @@ private int smart;
  Реализуйте метод, который сравнивает двух любых учеников Хогвартса по силе магии и расстоянию трансгрессии, и выводит в консоль сравнительную оценку между двумя учениками.
 Например, Драко Малфой обладает бОльшей мощностью магии, чем Захария Смит.
  Важно: поля объектов должны быть приватными.*/
+}

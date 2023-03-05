@@ -4,27 +4,28 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Gryffindor garryPotter = new Gryffindor("Гарри Поттер", 10, 9, 100, 95, 100);
-        Gryffindor germionaGrandger = new Gryffindor("Гермиона Грейнджер", 8, 10, 80, 89, 79);
-        Gryffindor ronYizly = new Gryffindor("Рон Уизли", 6, 5, 75, 50, 59);
+        Hogwarts garryPotter = new GryffindorStudents("Гарри Поттер", 10, 9, 100, 95, 100);
+        Hogwarts germionaGrandger = new GryffindorStudents("Гермиона Грейнджер", 8, 10, 80, 89, 79);
+        Hogwarts ronYizly = new GryffindorStudents("Рон Уизли", 6, 5, 75, 50, 59);
         //
-        Hufflepuff zachariahSmith = new Hufflepuff("Захария Смит", 6, 5, 75, 50, 59);
-        Hufflepuff cedricDiggory = new Hufflepuff(" Седрик Диггори", 6, 5, 75, 50, 59);
-        Hufflepuff justinFinchFletchley = new Hufflepuff("Джастин Финч-Флетчли", 6, 5, 75, 50, 59);
+        Hogwarts zachariahSmith = new HufflepuffStudents("Захария Смит", 6, 5, 75, 50, 59);
+        Hogwarts cedricDiggory = new HufflepuffStudents(" Седрик Диггори", 6, 5, 75, 50, 59);
+        Hogwarts justinFinchFletchley = new HufflepuffStudents("Джастин Финч-Флетчли", 6, 5, 75, 50, 59);
         //
-        Ravenclaw zhouChang = new Ravenclaw("Чжоу Чанг", 6, 5, 75, 50, 59,45);
-        Ravenclaw padmaPatil = new Ravenclaw("Падма Патил", 6, 5, 75, 50, 75,50);
-        Ravenclaw marcusBelby = new Ravenclaw("Маркус Белби", 6, 5, 75, 50, 94,51);
+        Hogwarts zhouChang = new RavenclawStudents("Чжоу Чанг", 6, 5, 75, 50, 59, 45);
+        Hogwarts padmaPatil = new RavenclawStudents("Падма Патил", 6, 5, 75, 50, 75, 50);
+        Hogwarts marcusBelby = new RavenclawStudents("Маркус Белби", 6, 5, 75, 50, 94, 51);
         //
-        Slytherin dracoMalfoy = new Slytherin("Драко Малфой", 6, 5, 75, 50, 59,45, 12);
-        Slytherin grahamMontague = new Slytherin("Грэхэм Монтегю", 6, 5, 75, 50, 75,50,41);
-        Slytherin gregoryGoyle = new Slytherin("Грегори Гойл", 6, 5, 75, 50, 94,51, 15);
+        Hogwarts dracoMalfoy = new SlytherinStudents("Драко Малфой", 6, 5, 75, 50, 59, 45, 12);
+        Hogwarts grahamMontague = new SlytherinStudents("Грэхэм Монтегю", 6, 5, 75, 50, 75, 50, 41);
+        Hogwarts gregoryGoyle = new SlytherinStudents("Грегори Гойл", 6, 5, 75, 50, 94, 51, 15);
+        
 
         /*public String printAllInformationOfStudents() {
-            return "hogwarts{" +
-                    "fullNameStudent='" + hogwarts.getFullNameStudent() + '\'' +
-                    ", powerOfMagic=" + hogwarts.getPowerOfMagic() +
-                    ", distanceOfTheTransgression=" + hogwarts.getDistanceOfTheTransgression() +
+            return "Hogwarts{" +
+                    "fullNameStudent='" + Hogwarts.getFullNameStudent() + '\'' +
+                    ", powerOfMagic=" + Hogwarts.getPowerOfMagic() +
+                    ", distanceOfTheTransgression=" + Hogwarts.getDistanceOfTheTransgression() +
                     '}';*/
 
         /*

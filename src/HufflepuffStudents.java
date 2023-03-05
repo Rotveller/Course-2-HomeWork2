@@ -1,4 +1,4 @@
-public class Hufflepuff extends hogwarts{
+public class HufflepuffStudents extends Hogwarts{
     //Пуффендуй
     private int hardworking;
     //трудолюбивы
@@ -8,11 +8,26 @@ public class Hufflepuff extends hogwarts{
     //честны
 
 
-    public Hufflepuff(String fullNameStudent, int powerOfMagic, int distanceOfTheTransgression, int hardworking, int loyal, int honest) {
+    public HufflepuffStudents(String fullNameStudent, int powerOfMagic, int distanceOfTheTransgression, int hardworking, int loyal, int honest) {
         super(fullNameStudent, powerOfMagic, distanceOfTheTransgression);
         this.hardworking = hardworking;
         this.loyal = loyal;
         this.honest = honest;
+    }
+    private int ability() {
+        return hardworking+loyal+honest;
+    }
+
+    public void compareTotalAbility(HufflepuffStudents hufflepuffStudents) {
+        int student1 = ability();
+        int student2 = hufflepuffStudents.ability();
+        if (student1 > student2) {
+            System.out.println("Студент Пуффендуй"+getFullNameStudent()+" лучше чем студент Пуффендуй"+hufflepuffStudents.getFullNameStudent()+" "+student2+" <"+student1);
+        }else if (student1 < student2) {
+            System.out.println("Студент Пуффендуй"+hufflepuffStudents.getFullNameStudent()+" лучше чем студент Пуффендуй"+getFullNameStudent()+" "+student1+" <"+student2);
+        }else{
+            System.out.println("Студент Пуффендуй"+getFullNameStudent()+" имеет равное количество Пуффендуй"+hufflepuffStudents.getFullNameStudent()+" "+student2+"="+student1);
+        }
     }
 }
 /*В школе магии и волшебства Хогвартс есть четыре факультета:
@@ -20,7 +35,7 @@ public class Hufflepuff extends hogwarts{
                 - Пуффендуй
                 - Когтевран
                 - Слизерин
-                Gryffindor, Ravenclaw, Hufflepuff, Slytherin.
+                Gryffindor, Ravenclaw, HufflepuffStudents, Slytherin.
 Студентам каждого из этих факультетов присущи свои свойства характера. Эти свойства оцениваются в целочисленном эквиваленте от 0 до 100.
 Всем Гриффиндорцам присущи благородство, честь и храбрость.
 Студенты Пуффендуя трудолюбивы, верны, честны.
