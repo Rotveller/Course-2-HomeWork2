@@ -1,6 +1,6 @@
-public class RavenclawStudents extends Hogwarts{
+public class RavenclawStudents extends Hogwarts {
     //Когтевран
-private int smart;
+    private int smart;
     //умны
     private int wise;
     //мудры
@@ -16,20 +16,30 @@ private int smart;
         this.witty = witty;
         this.creativity = creativity;
     }
+
     private int ability() {
-        return smart+wise+witty+creativity;
+        return smart + wise + witty + creativity;
     }
 
-    public void compareTotalAbility(RavenclawStudents ravenclawStudents) {
+    public void compareRavenclawStudents(RavenclawStudents ravenclawStudents) {
         int student1 = ability();
         int student2 = ravenclawStudents.ability();
         if (student1 > student2) {
-            System.out.println("Студент Когтевран"+getFullNameStudent()+" лучше чем студент Когтевран"+ravenclawStudents.getFullNameStudent()+" "+student2+" <"+student1);
-        }else if (student1 < student2) {
-            System.out.println("Студент Когтевран"+ravenclawStudents.getFullNameStudent()+" лучше чем студент Когтевран"+getFullNameStudent()+" "+student1+" <"+student2);
-        }else{
-            System.out.println("Студент Когтевран"+getFullNameStudent()+" имеет равное количество Когтевран"+ravenclawStudents.getFullNameStudent()+" "+student2+"="+student1);
+            System.out.println("Студент Когтевран " + getFullNameStudent() + " лучше чем студент Когтевран" + ravenclawStudents.getFullNameStudent() + " " + student1 + " > " + student2);
+        } else if (student1 < student2) {
+            System.out.println("Студент Когтевран " + ravenclawStudents.getFullNameStudent() + " лучше чем студент Когтевран" + getFullNameStudent() + " " + student1 + " > " + student2);
+        } else {
+            System.out.println("Студент Когтевран " + getFullNameStudent() + " имеет равное количество Когтевран" + ravenclawStudents.getFullNameStudent() + " " + student2 + " = " + student1);
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Когтевран" + super.toString() +
+                "смышленность = " + smart +
+                ", мудрость = " + wise +
+                ", остроумность = " + witty +
+                ", creativity = " + creativity;
     }
 }
 /*В школе магии и волшебства Хогвартс есть четыре факультета:

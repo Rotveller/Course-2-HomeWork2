@@ -1,13 +1,13 @@
-public class SlytherinStudents extends Hogwarts{
+public class SlytherinStudents extends Hogwarts {
     private int cunning;
     //хитрость
     private int determination;
     //решительность
     private int ambition;
     //амбициозность
-    private int resourcefulness ;
+    private int resourcefulness;
     //находчивость
-    private int imperiousness ;
+    private int imperiousness;
     //властность
 
     public SlytherinStudents(String fullNameStudent, int powerOfMagic, int distanceOfTheTransgression, int cunning, int determination, int ambition, int resourcefulness, int imperiousness) {
@@ -18,22 +18,32 @@ public class SlytherinStudents extends Hogwarts{
         this.resourcefulness = resourcefulness;
         this.imperiousness = imperiousness;
     }
+
     private int ability() {
-        return cunning+determination+ambition+resourcefulness+imperiousness;
+        return cunning + determination + ambition + resourcefulness + imperiousness;
     }
 
-    public void compareTotalAbility(SlytherinStudents slytherinStudents) {
+    public void compareSlytherinStudents(SlytherinStudents slytherinStudents) {
         int student1 = ability();
         int student2 = slytherinStudents.ability();
         if (student1 > student2) {
-            System.out.println("Студент Слизерин"+getFullNameStudent()+" лучше чем студент Слизерин"+slytherinStudents.getFullNameStudent()+" "+student2+" <"+student1);
-        }else if (student1 < student2) {
-            System.out.println("Студент Слизерин"+slytherinStudents.getFullNameStudent()+" лучше чем студент Слизерин"+getFullNameStudent()+" "+student1+" <"+student2);
-        }else{
-            System.out.println("Студент Слизерин"+getFullNameStudent()+" имеет равное количество Слизерин"+slytherinStudents.getFullNameStudent()+" "+student2+"="+student1);
+            System.out.println("Студент Слизерин " + getFullNameStudent() + " лучше чем студент Слизерин" + slytherinStudents.getFullNameStudent() + " " + student1 + " > " + student2);
+        } else if (student1 < student2) {
+            System.out.println("Студент Слизерин " + slytherinStudents.getFullNameStudent() + " лучше чем студент Слизерин " + getFullNameStudent() + " " + student1 + " > " + student2);
+        } else {
+            System.out.println("Студент Слизерин " + getFullNameStudent() + " имеет равное количество Слизерин " + slytherinStudents.getFullNameStudent() + " " + student2 + " = " + student1);
         }
     }
 
+    @Override
+    public String toString() {
+        return "Слизерин " + super.toString() +
+                "хитрость = " + cunning +
+                ", решительность = " + determination +
+                ", амбиции = " + ambition +
+                ", находчивость = " + resourcefulness +
+                ", властность = " + imperiousness;
+    }
     //Слизерин
     /*В школе магии и волшебства Хогвартс есть четыре факультета:
         - Гриффиндор

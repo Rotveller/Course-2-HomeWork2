@@ -4,23 +4,26 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Hogwarts garryPotter = new GryffindorStudents("Гарри Поттер", 10, 9, 100, 95, 100);
-        Hogwarts germionaGrandger = new GryffindorStudents("Гермиона Грейнджер", 8, 10, 80, 89, 79);
-        Hogwarts ronYizly = new GryffindorStudents("Рон Уизли", 6, 5, 75, 50, 59);
+        GryffindorStudents garryPotter = new GryffindorStudents("Гарри Поттер", 10, 8, 100, 95, 100);
+        GryffindorStudents germionaGrandger = new GryffindorStudents("Гермиона Грейнджер", 8, 10, 80, 89, 79);
+        GryffindorStudents ronYizly = new GryffindorStudents("Рон Уизли", 6, 5, 75, 50, 59);
         //
-        Hogwarts zachariahSmith = new HufflepuffStudents("Захария Смит", 6, 5, 75, 50, 59);
-        Hogwarts cedricDiggory = new HufflepuffStudents(" Седрик Диггори", 6, 5, 75, 50, 59);
-        Hogwarts justinFinchFletchley = new HufflepuffStudents("Джастин Финч-Флетчли", 6, 5, 75, 50, 59);
+        HufflepuffStudents zachariahSmith = new HufflepuffStudents("Захария Смит", 6, 5, 75, 50, 59);
+        HufflepuffStudents cedricDiggory = new HufflepuffStudents(" Седрик Диггори", 6, 5, 75, 50, 59);
+        HufflepuffStudents justinFinchFletchley = new HufflepuffStudents("Джастин Финч-Флетчли", 6, 5, 75, 50, 59);
         //
-        Hogwarts zhouChang = new RavenclawStudents("Чжоу Чанг", 6, 5, 75, 50, 59, 45);
-        Hogwarts padmaPatil = new RavenclawStudents("Падма Патил", 6, 5, 75, 50, 75, 50);
-        Hogwarts marcusBelby = new RavenclawStudents("Маркус Белби", 6, 5, 75, 50, 94, 51);
+        RavenclawStudents zhouChang = new RavenclawStudents("Чжоу Чанг", 6, 5, 75, 50, 59, 45);
+        RavenclawStudents padmaPatil = new RavenclawStudents("Падма Патил", 6, 5, 75, 50, 75, 50);
+        RavenclawStudents marcusBelby = new RavenclawStudents("Маркус Белби", 6, 5, 75, 50, 94, 51);
         //
-        Hogwarts dracoMalfoy = new SlytherinStudents("Драко Малфой", 6, 5, 75, 50, 59, 45, 12);
-        Hogwarts grahamMontague = new SlytherinStudents("Грэхэм Монтегю", 6, 5, 75, 50, 75, 50, 41);
-        Hogwarts gregoryGoyle = new SlytherinStudents("Грегори Гойл", 6, 5, 75, 50, 94, 51, 15);
-        
+        SlytherinStudents dracoMalfoy = new SlytherinStudents("Драко Малфой", 6, 5, 75, 50, 59, 45, 12);
+        SlytherinStudents grahamMontague = new SlytherinStudents("Грэхэм Монтегю", 6, 5, 75, 50, 75, 50, 41);
+        SlytherinStudents gregoryGoyle = new SlytherinStudents("Грегори Гойл", 6, 5, 75, 50, 94, 51, 15);
 
+        garryPotter.printAllInformationOfStudents();
+        germionaGrandger.printAllInformationOfStudents();
+        garryPotter.compareTotalAbility(germionaGrandger);
+        garryPotter.compareGryffindorStudents(germionaGrandger);
         /*public String printAllInformationOfStudents() {
             return "Hogwarts{" +
                     "fullNameStudent='" + Hogwarts.getFullNameStudent() + '\'' +
