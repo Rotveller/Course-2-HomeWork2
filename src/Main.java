@@ -1,29 +1,34 @@
 import java.util.Random;
 
 public class Main {
-   private static final Random RANDOM = new Random();
+    private static final Random RANDOM = new Random();
+
     public static void main(String[] args) {
 
-        GryffindorStudents garryPotter =  generateGryffindorStudent("Гарри Поттер");
+        GryffindorStudents garryPotter = generateGryffindorStudent("Гарри Поттер");
         GryffindorStudents germionaGrandger = generateGryffindorStudent("Гермиона Грейнджер");
         GryffindorStudents ronYizly = generateGryffindorStudent("Рон Уизли");
         //
-        HufflepuffStudents zachariahSmith = HufflepuffStudents("Захария Смит", 6, 5, 75, 50, 59);
-        HufflepuffStudents cedricDiggory = HufflepuffStudents(" Седрик Диггори", 6, 5, 75, 50, 59);
-        HufflepuffStudents justinFinchFletchley = HufflepuffStudents("Джастин Финч-Флетчли", 6, 5, 75, 50, 59);
+        HufflepuffStudents zachariahSmith = generateHufflepuffStudents("Захария Смит");
+        HufflepuffStudents cedricDiggory = generateHufflepuffStudents(" Седрик Диггори");
+        HufflepuffStudents justinFinchFletchley = generateHufflepuffStudents("Джастин Финч-Флетчли");
         //
-        RavenclawStudents zhouChang = RavenclawStudents("Чжоу Чанг", 6, 5, 75, 50, 59, 45);
-        RavenclawStudents padmaPatil = RavenclawStudents("Падма Патил", 6, 5, 75, 50, 75, 50);
-        RavenclawStudents marcusBelby = RavenclawStudents("Маркус Белби", 6, 5, 75, 50, 94, 51);
+        RavenclawStudents zhouChang = generateRavenclawStudents("Чжоу Чанг");
+        RavenclawStudents padmaPatil = generateRavenclawStudents("Падма Патил");
+        RavenclawStudents marcusBelby = generateRavenclawStudents("Маркус Белби");
         //
-        SlytherinStudents dracoMalfoy = SlytherinStudents("Драко Малфой", 6, 5, 75, 50, 59, 45, 12);
-        SlytherinStudents grahamMontague = SlytherinStudents("Грэхэм Монтегю", 6, 5, 75, 50, 75, 50, 41);
-        SlytherinStudents gregoryGoyle = SlytherinStudents("Грегори Гойл", 6, 5, 75, 50, 94, 51, 15);
+        SlytherinStudents dracoMalfoy = generateSlytherinStudents("Драко Малфой");
+        SlytherinStudents grahamMontague = generateSlytherinStudents("Грэхэм Монтегю");
+        SlytherinStudents gregoryGoyle = generateSlytherinStudents("Грегори Гойл");
 
         garryPotter.printAllInformationOfStudents();
         germionaGrandger.printAllInformationOfStudents();
+        zachariahSmith.printAllInformationOfStudents();
+        zhouChang.printAllInformationOfStudents();
+        dracoMalfoy.printAllInformationOfStudents();
         garryPotter.compareTotalAbility(germionaGrandger);
         garryPotter.compareGryffindorStudents(germionaGrandger);
+        garryPotter.compareTotalAbility(dracoMalfoy);
     }
 
     private static GryffindorStudents generateGryffindorStudent(String fullNameStudent) {
@@ -36,6 +41,36 @@ public class Main {
                 RANDOM.nextInt(100)
         );
     }
+
     private static HufflepuffStudents generateHufflepuffStudents(String fullNameStudent) {
-return new HufflepuffStudents(
-        fullNameStudent,
+        return new HufflepuffStudents(
+                fullNameStudent,
+                RANDOM.nextInt(10),
+                RANDOM.nextInt(10),
+                RANDOM.nextInt(100),
+                RANDOM.nextInt(100),
+                RANDOM.nextInt(100)
+        );
+    } private static RavenclawStudents generateRavenclawStudents(String fullNameStudent) {
+        return new RavenclawStudents(
+                fullNameStudent,
+                RANDOM.nextInt(10),
+                RANDOM.nextInt(10),
+                RANDOM.nextInt(100),
+                RANDOM.nextInt(100),
+                RANDOM.nextInt(100),
+                RANDOM.nextInt(100)
+        );
+    } private static SlytherinStudents generateSlytherinStudents(String fullNameStudent) {
+        return new SlytherinStudents(
+                fullNameStudent,
+                RANDOM.nextInt(10),
+                RANDOM.nextInt(10),
+                RANDOM.nextInt(100),
+                RANDOM.nextInt(100),
+                RANDOM.nextInt(100),
+                RANDOM.nextInt(100),
+                RANDOM.nextInt(100)
+        );
+    }
+}
