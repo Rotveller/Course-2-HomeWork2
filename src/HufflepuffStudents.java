@@ -33,8 +33,8 @@ public class HufflepuffStudents extends Hogwarts {
 
     @Override
     public String toString() {
-        return " Пуффендуй " + super.toString() +
-                "трудолюбивость = " + hardworking +
+        return " Студент Пуффендуй " + super.toString() +
+                " трудолюбивость = " + hardworking +
                 ", верность = " + loyal +
                 ", честность = " + honest;
     }
